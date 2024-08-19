@@ -10,7 +10,7 @@ const dotenvConfig = dotenv.config();
 if (dotenvConfig.error) {
   throw dotenvConfig.error;
 }
-const PORT = 3000 || process.env.PORT;
+const PORT =  process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`\n\t Server is running on http://localhost:${PORT} \n`);
 });
